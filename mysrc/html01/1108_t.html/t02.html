@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id" name="uid">
+    <input type="button" value="버튼" id="duplextChkid">
+    검색어 : <span id="idinfo"></span>
+</body>
+<script>
+    var badword =['apple','banana'];
+    var btn = document.getElementById('duplextChkid');
+    var search = document.getElementById('idinfo');
+    var text = document.getElementById('id');
+    text.onchange = () => {
+        if (badword[0]==text.value || 
+        badword[1]==text.value) {
+            alert('금지어가 포함되었습니다.');
+        }else {
+            search.innerText = text.value;
+        }
+    }
+    
+</script>
+</html>

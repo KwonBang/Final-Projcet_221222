@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <form action="search" method="get">
+                <div id="logo">
+                    <div><a href="index.html">옷가게</a></div>
+                </div>
+                <div id="search">
+                    <input id="search_txt" type="text" name="search" value="" placeholder="검색어를 입력해 주세요.">
+                    <button id="search_btn" type="submit" onclick="">
+                        <span>검색</span>
+                    </button>
+                </div>
+            </form>
+        </header>
+        <nav id="mainmenu">
+            <ul>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">최근 본 상품</a></li>
+                <li><a href="#">주문배송조회</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </nav>
+        <aside id="category">
+            <ul id="category_list">
+                <li><a href="#">인기</a></li>
+                <li><a href="#">상의</a></li>
+                <li><a href="#">아우터</a></li>
+                <li><a href="#">바지</a></li>
+                <li><a href="#">원피스</a></li>
+                <li><a href="#">스니커즈</a></li>
+                <li><a href="#">신발</a></li>
+                <li><a href="#">가방</a></li>
+                <li><a href="#">양말</a></li>
+                <li><a href="#">모자</a></li>
+                <li><a href="#">액세서리</a></li>
+                <li><a href="#">시계</a></li>
+                <li><a href="#">선글라스</a></li>
+                <li><a href="#">주얼리</a></li>
+            </ul>
+        </aside>
+        <section id="sec">
+            <p>아우터</p>
+            <img id="img" src="img/1609490_8_500.jpg">
+            
+        </section>
+        <aside id="login">
+            <form action="loginChk" method="post">
+                <div>
+                    <h4>로그인</h4>
+                    <div>아이디</div>
+                    <div>
+                        <input type="text" id="id" name="id" placeholder="아이디">
+                    </div>
+                    <div>비밀번호</div>
+                    <div>
+                        <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                    </div>
+                    <div>
+                        <button type="submit" id="log.login">
+                            <span>로그인</span>
+                        </button>
+                        <a href="join.html">
+                            <button type="button" id="memberset">
+                                <span>회원가입</span>
+                            </button>
+                        </a> 
+                    </div>
+                </div>
+            </form>
+        </aside>
+        <aside id="low">
+            <div>
+                <img src="img/ezgif.com-gif-maker.gif" width="256" height="400">
+            </div>
+        </aside>
+        <footer class="mainfooter">
+            <ul id="foot_list">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">제휴제안</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </footer>
+    </div>
+    <a href="Board?id=abc&pass=okok">Test</a>
+    <form action="Board" method="get">
+    	<input type="text" name="id">
+    	<input type="password" name="pass">
+    	<input type="submit" value="로그인">
+    </form>
+</body>
+</html>

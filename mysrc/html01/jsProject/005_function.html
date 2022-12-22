@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        // 함수 정의 : 정의와 호출, 호출(매개변수 전달) > 함수처리 > 리턴값..
+        //            정의 : 익명의 함수(이름이 없다)-간단하게 구현하고자 할때, 호출할 필요 없을때
+        
+        //함수의 기본형식
+        function add(a, b){
+            return a+b;
+        }
+        //함수 이름이 : ddd 매개변수 (a,b) {코드}
+        ddd = (a,b) => {
+            return a+b;
+        }
+        d12 = a => {    // 매개변수가 한 개일 경우는 소괄호를 생략할 수 있다...
+            return a+30;
+        }
+        //익명의 함수
+        var kkk = function(a,b){
+            return a-b;
+        }
+        var abc = (a,b) => {
+            return a*b;
+        }
+        var ccc = () => {
+            return 7;
+        }
+        drawPan.addEventListener('mousemove',() => { //매개변수로 사용(콜백함수)
+            if(flag){
+                e=window.event;
+                console.log('마우스 move');
+                console.log((e.clientX-8)+"/"+(e.clientY-8));
+            }
+        });
+    </script>
+<body>
+    
+</body>
+</html>

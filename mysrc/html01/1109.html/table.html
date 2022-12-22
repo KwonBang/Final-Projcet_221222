@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 1024px;
+        margin: 0;
+    }
+    #table{
+        text-align: center;
+    }
+</style>
+<body>
+    <div>
+        <table border="1" id="table">
+            <form action="#" method="get">
+                <tr>
+                    <td>선택</td>
+                    <td>상품정보</td>
+                    <td>옵션</td>
+                    <td>상품금액</td>
+                    <td>배송비</td>
+                </tr>
+            </form>
+        </table>
+        <input type="button" value="선택삭제" id="del">
+    </div>
+    <div>
+        <table border="1">
+            <form action="#" method="get">
+                <tr>
+                    <th>상품정보</th>
+                    <th>옵션</th>
+                    <th>상품금액</th>
+                    <th>배송비</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="a"></td>
+                    <td><input type="text" id="b"></td>
+                    <td><input type="text" id="c"></td>
+                    <td><input type="text" id="d"></td>
+                </tr>
+            </form>
+        </table>
+        <input type="button" value="장바구니 담기" id="save">
+    </div>
+</body>
+<script>
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    var c = document.getElementById('c');
+    var d = document.getElementById('d');
+    var save = document.getElementById('save');
+    
+    var table = document.getElementById('table');
+    save.onclick = () => {
+        var newRow = table.insertRow();
+        var newCell = newRow.insertCell(0);
+        newCell.innerHTML = '<input type="checkbox">';
+        var newCell1 = newRow.insertCell(1);
+        newCell1.innerText = a.value;
+        var newCell2 = newRow.insertCell(2);
+        newCell2.innerText = b.value;
+        var newCell3 = newRow.insertCell(3);
+        newCell3.innerText = c.value;
+        var newCell4 = newRow.insertCell(4);
+        newCell4.innerText = d.value;
+        a.value='';
+        b.value='';
+        c.value='';
+        d.value='';
+        
+    }
+    var del = document.getElementById('del');
+    del.onclick = () => {
+        for (let i = 1; i < table.rows.length; i++) {
+            var checkbox = table.rows[i].cells[0].childNodes[0].checked;
+            if (checkbox) {
+                table.deleteRow(i);
+                i--;
+            }
+        }
+    }
+</script>
+</html>

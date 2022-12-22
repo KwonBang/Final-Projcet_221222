@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-color: aqua;
+        width: 1280px;
+        margin: 0;
+    }
+    #can{
+        margin: 0;
+        background-color: blue;
+        width: 1280px;
+        height: 700px;
+    }
+    #paint{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid;
+    }
+    #set{
+        width: 1280px;
+        height: 181px;
+        background-color: rgb(165, 154, 164);
+    }
+</style>
+<body>
+    
+    <!--  -->
+    <div id="can">
+        <canvas id="paint" width="1278" height="700"></canvas>
+    </div>
+    <div id="set">   <!-- 색상 선택 등 컨트롤 박스 -->
+        검정<input type="radio" name="color" onclick="color(this.value)" value="black" checked>
+        빨강<input type="radio" name="color" onclick="color(this.value)" value="red">
+        초록<input type="radio" name="color" onclick="color(this.value)" value="green">
+        <br>
+        <input type="range" name="bold" min="1" max="30" onchange="range(this.value)" value="1">
+        <br>
+        둥근모서리<input type="radio" name="edge" onclick="edge(this.value)" value="round" checked>
+        각진모서리<input type="radio" name="edge" onclick="edge(this.value)" value="square">
+        <br>
+        <input type="color" class="color1" name="color1" value="#FFAAAA" onchange="color(this.value)">
+        <input type="button" value="네모" name="figure" onclick="">
+        <input type="button" value="동그라미" name="figure" onclick="">
+        <input type="button" value="리셋" name="reset" onclick="">
+    </div>
+</body>
+<script>
+    const drawPan = document.getElementById('paint');
+    // console.log(typeof(drawPan));
+    var myctx = drawPan.getContext('2d');
+    myctx.lineCap="round";
+    var flag=false;
+    var sx;
+    var sy;
+    var ex;
+    var ey;
+    // 마우스 동작 등록
+    
+    // 마우스 클릭 시점
+    drawPan.addEventListener('mousedown',() => {
+        startDraw();
+    }); //e 매개변수 => {코드작성} : 익명의 함수로 정의 한다.
+    //이벤트리스너의 메서드에서 매개변수로 mousedown동작을 지정하고 그 다음에 동작을 정의
+    // 마우스 버튼 뗄 시점
+    drawPan.addEventListener('mouseup',() => {
+        endDraw();
+    });
+    // 마우스 무브 움직임
+    drawPan.addEventListener('mousemove',() => {
+        moveDraw();
+    });
+    // html에서 색상에 이벤트를 처리하는 함수
+    color = c => {
+        myctx.strokeStyle=c;
+        myctx.beginPath();
+    }
+    range = size => {
+        myctx.lineWidth=size;
+        myctx.beginPath();
+    }
+    edge = e => {
+        myctx.lineCap=e;
+        if(e=="square"){
+            alert("각진모서리로 변경");
+            myctx.lineJoin="miter";
+        }else{
+            alert("둥근모서리로 변경");
+            myctx.lineJoin="round";
+        }
+        myctx.beginPath();
+    }
+    function startDraw() {  //시작점을 시작으로 --- 이동점의 선을 긋는것..
+        flag=true;
+        let e=window.event;
+        sx=e.clientX;
+        sy=e.clientY;
+        console.log('마우스 클릭 시작');
+        myctx.moveTo(e.clientX, e.clientY);
+        // console.log((e.clientX)+"/"+(e.clientY));
+    }
+    function endDraw() {
+        myctx.strokeRect(sx,sy,-(sx-ex),-(sy-ey));
+        console.log('마우스 클릭 끝');
+        flag=false;
+    }
+    function moveDraw(){    //이동점으로 선을 긋는 것
+        if(flag){
+            let e=window.event;
+            myctx.lineTo(e.clientX, e.clientY);
+            // myctx.lineJoin="round";
+            // myctx.lineCap="round";
+            myctx.stroke();
+            // console.log('마우스 move');
+            ex=e.clientX;
+            ey=e.clientY;
+            myctx.clearRect(sx-5,sy-5,-(sx-ex)-5,-(sy-ey)-5);
+            myctx.strokeRect(sx,sy,-(sx-ex),-(sy-ey));
+            console.log((e.clientX)+"/"+(e.clientY));
+        }
+    }
+    
+</script>
+</html>

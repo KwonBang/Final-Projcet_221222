@@ -1,0 +1,9 @@
+#Tomcat publish data
+#Mon Nov 28 17:10:01 KST 2022
+org.eclipse.jst.jee.server\:hmshop=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\hmshop
+org.eclipse.jst.jee.server\:hm_class=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\hm_class
+org.eclipse.jst.jee.server\:jsp004=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\jsp004
+org.eclipse.jst.jee.server\:jsp003=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\jsp003
+org.eclipse.jst.jee.server\:jsp002=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\jsp002
+org.eclipse.jst.jee.server\:HRD_8767=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\HRD_8767
+org.eclipse.jst.jee.server\:jsp001=D\:\\mysrc\\web\\common\\apache-tomcat-8.5.83\\wtpwebapps\\jsp001

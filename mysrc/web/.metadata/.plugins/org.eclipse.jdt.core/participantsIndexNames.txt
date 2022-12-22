@@ -1,0 +1,27 @@
+INDEX VERSION 1.131
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3994846608.index
+\hmshop\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3828681851.index
+\jsp004\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\185117083.index
+\jsp002\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2090236779.index
+\jsp001\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3313066949.index
+\jsp004\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\478838281.index
+\jsp003\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2688384476.index
+\hm_class\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\398367377.index
+\hmshop2\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2389766918.index
+\hmshop\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2027937789.index
+\jsp003\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2427315700.index
+\jsp003\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2045175037.index
+\hmshop2\src
+D:\mysrc\web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3207200649.index
+\HRD_8767\src

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <form action="search" method="get">
+                <div id="logo">
+                    <div><a href="index.html">옷가게</a></div>
+                </div>
+                <div id="search">
+                    <input id="search_txt" type="text" name="search" value="" placeholder="검색어를 입력해 주세요.">
+                    <button id="search_btn" type="submit" onclick="">
+                        <span>검색</span>
+                    </button>
+                </div>
+            </form>
+        </header>
+        <nav id="mainmenu">
+            <ul>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">최근 본 상품</a></li>
+                <li><a href="#">주문배송조회</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </nav>
+        <section class="set">
+            <div>
+                <form action="loginPass" method="get" id="form">
+                    <table style="margin-left: 300px;">
+                        <tr>
+                            <td>아이디</td>
+                            <td><input type="text" name="id" id="id"
+                                placeholder="8~10글자 숫자1개이상 포함" required
+                                onkeyup="id_modify()"></td>
+                            <td>
+                                <input type="button" value="아이디검사" id="id_chk">
+                                <input type="text" id="chk_text"
+                                hidden required style="border: none; background: transparent; color: white;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>이름</td>
+                            <td><input type="text" name="name" required></td>
+                        </tr>
+                        <tr>
+                            <td>전화번호</td>
+                            <td>
+                                <input type="tel"
+                                name="tel" 
+                                id="tel" 
+                                placeholder="010-0000-0000" 
+                                required
+                                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                                maxlength="13"
+                                onkeyup="keyevent();"
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit" onclick="chk()" id="insert">회원가입</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+        <footer class="join_footer">
+            <div>
+                <ul id="foot_list_join">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">제휴제안</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    var chk_text = document.getElementById('chk_text');
+    var hidn = document.getElementById(hidn);
+    var form = document.getElementById('form');
+    var id = document.getElementById('id');
+    var id_chk = document.getElementById('id_chk');
+    var tel = document.getElementById('tel');
+    var id_chk_test = /[0-9]/;
+    var id_chk_t_f = false;
+    var insert = document.getElementById("insert");
+    id_chk.onclick = () => {
+        var id_text = id.value;
+        if(id_text.length>=8&&id_text.length<=10){
+            if(id_chk_test.test(id_text)){
+                alert('사용가능');
+                id_chk_t_f = true;
+                hid();
+            }else{
+                alert('숫자미 포함');
+                id_chk_t_f = false;
+                hid();
+            }
+        }else{
+            alert('숫자1개이상 포함 8~10글자 내로 입력');
+            id_chk_t_f = false;
+            hid();
+        }
+    }
+    id_modify = () => {
+        if(id_chk_t_f){
+            id_chk_t_f = false;
+            chk_text.value =null;
+        }
+    }
+    keyevent = () => {
+        tel.value = autoHypenPhone(tel.value);
+    }
+    function autoHypenPhone(str){
+      str = str.replace(/[^0-9]/g, '');
+      var tmp = '';
+      if( str.length < 4){
+        return str;
+      }else if(str.length < 7){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3);
+        return tmp;
+      }else if(str.length < 11){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 3);
+        tmp += '-';
+        tmp += str.substr(6);
+        return tmp;
+      }else{
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 4);
+        tmp += '-';
+        tmp += str.substr(7);
+        return tmp;
+      }
+      return str;
+    }
+    hid=()=>{
+        if(id_chk_t_f){
+            chk_text.value ="사용가능";
+        }else{
+            chk_text.value =null;
+        }
+    }
+    chk=()=>{
+        if(id_chk_t_f){
+        }else{
+            alert("아이디,이름,전화번호를 입력하고 아이디 검사를 확인 하세요.");
+        }
+    }
+</script>
+</html>

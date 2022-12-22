@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 id="hhhh">hi js</h1>
+</body>
+<script>
+    //1. 선언문 전역변수와 지역변수
+    //   전역변수 같은 function-scoped   지역변수 block-scoped {     }
+    //2. function-scoped var        block-scoped - let, const(선언 후 초기값 대입 후 수정 불가.)
+    var a = 20;
+    if (true) {
+        var a = 30;
+        document.write(a);
+        document.write("<br>");
+    }
+    document.write(a);
+    document.write("<br>");
+    let bb = 'abc';
+    document.write(bb);
+    document.write("<br>");
+    bb='cccc';
+    document.write(bb);
+    document.write("<br>");
+    for(let i = 0;i<10;i++){
+        if(i%2==0){
+            document.write(i);
+            document.write("<br>");
+        }
+    }
+    var k1 = 10;    //number
+    var k2 = '10';  //String
+
+    if(k1 == k2){   //자료형 상관없이 값이 같으면 참
+        document.write("같다.");    //true
+    }
+
+    if(k1 === k2){   //값과 자료형까지 같아야 참
+        document.write("같다.asdasda");    //false
+    }
+
+    var a1 = new Array(10);
+    console.log(a1.length); //콘솔에 출력하라
+
+    var a2 = [34,'abc,45','kkk'];
+    for (let i = 0; i < a2.length; i++) {
+        document.write(a2[i]+"/"+typeof(a2[i]));
+        document.write("<br>");
+    }
+    document.write("------------------<br>");
+    /*
+    자바스크립트의 자료형, 조건문, 반복문, 배열과 관련된 문제입니다. 
+
+    1. 1부터 10까지 합을 구하는 프로그램을 작성하시오.*/
+    var q1 = 0;
+    for(let i = 1;i<=10;i++){
+     q1+=i;
+    }
+    document.write(q1);
+    document.write("<br>");
+    /*
+    2. 1부터 10까지의 숫자에서 짝수만 더하고 그 결과값을 출력하시오.
+    */
+    var q2 = 0;
+    for(let i = 1;i<=10;i++){
+        if(i%2==0){
+            q2+=i;
+        }
+    }
+    document.write(q2);
+    document.write("<br>");
+    /*
+    3. var a = [10,23,31,40,46]
+       배열의 값이 짝수인 경우만 총합을 구하시오.
+    */
+    var a = [10,23,31,40,46];
+    var q3 = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]%2==0) {
+            q3+=a[i];
+        }
+    }
+    document.write(q3);
+    document.write("<br>");
+    /*
+    4. var a = [10,23,31,40,46]
+       배열의 값이 짝수인 경우는 그 값에 -10을 하여 저장하세요.
+       그리고 배열의 모든 값을 출력하세요.
+    */
+    var q4 = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]%2==0) {
+            a[i]-=10;
+        }
+        q4+=a[i];
+    }
+    document.write(q4);
+    document.write("<br>");
+    /*
+    5. 다음과 같은 별을 출력하세요
+      *         1/1  
+      ***       2/3
+      *****     3/5
+      *******   4/7
+    */
+    for (let i = 1; i < 5; i++) {
+        for (let j = (i*2)-1; j > 0; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    /*
+    6. 다음과 같은 별을 출력하세요
+        0000*
+        000***
+        00*****
+        0*******
+    */
+    for(let i=0;i<4;i++) {
+			for(let j=0;j<i+5;j++){
+                if(j>=-i+4){
+                    document.write("0");
+                }else{
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+		}
+    document.write("<br>");
+    /*
+    7. for문의 continue를 사용하여 1부터 100까지 숫자 중 짝수만 합하는 프로그램을 작성하시오.
+    */
+   var q7 = 0;
+    for (let i = 1; i <= 100; i++) {
+        if(i%2==1) continue;
+        q7+=i;
+    }
+    document.write(q7);
+    document.write("<br>");
+    /*
+    추가 문제~~~
+    8. 1부터 10까지 각 팩토리얼의 합을 구하시오.
+    1 + 1*2 + 1*2*3 + .. + 1*2*3*4*5*6*7*8*9*10 = ?
+    */
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 0; j < i; j++) {
+            
+            
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    /*
+    9. var a = new Array(24);
+    배열의 인덱스를 시간으로 정의한다.
+    프로그램이 실행되면 0-23시 중 시간을 입력하시오라는 문구가 나온다. - while(true)로 무한반복
+    키보드로 0-23시 숫자 중 하나를 입력한다. 
+    var a =  prompt('수를 입력하세요.'); <키보드로 입력 받을 수 있다>
+    이때 키보드로 99를 입력하면 무한반복문을 종료한다.
+    위에서 시간을 입력하면 이번에는 스케줄을 입력한다. 
+    스케줄 입력이 끝나면 다시 0-23시 중 시간을 입력하시오라는
+    문구가 나오면서 반복한다.
+    
+    스케줄이 모두 입력 되었으면(99로 종료 한다) 
+    입력된 스케줄이 출력되도록 한다.  출력형태는 0시 : 일정내용
+    
+    만약 현재 시간에 해당되는 일정이라면 일정내용 뒤에 *를 붙힌다. 
+    현재 시간은 new Data(); 객체를 이용한다. // 교재 ppt 에 나옴
+    */
+    var a9 = new Array(24);
+    while (true) {
+        var a9_1 =  prompt('0-23시 중 시간을 입력하시오');
+        if (a9_1==99) {
+            break;
+        }else{
+            var a9_3 = a9_1;
+        }
+        var a9_2 =  prompt('스케줄을 입력하시오');
+    }
+    document.write(a9_3+"시 : "+a9_2);
+    document.write("<br>");
+    
+   /*
+   10. 다음 소스를 분석하시오.
+   수를 입력할때는 숫자공백숫자를 입력한다. 예를들어 20 30
+   const n = prompt('수를 입력하세요.').split(' ');
+   console.log(Math.pow(parseInt(n[0], 10), parseInt(n[1], 10)));
+   */
+
+  document.write("<br>");
+  /*11. const scores = prompt('세 과목의 점수를 입력하세요.').split(' ');
+  위 코드로 세 과목의 점수를 입력받고 총합과 평균을 구하시오.
+  평균은 소숫점 둘째자리까지 표현한다. (반올림)*/
+  
+  document.write("<br>");
+</script>
+</html>
+<!-- 
+    html 문서는 인터프리터 언어 : 첫번째 줄부터 해석해서 바로적용 1번라인부터 해독을 합니다.
+    html : 문서는 정적인 문서, css : 문서에 디자인 자바스크립트는 동적인 화면을 제공하는 것
+ -->

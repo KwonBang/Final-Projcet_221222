@@ -1,0 +1,159 @@
+body{
+    width: 1024px;
+    height: 881px;
+    margin: auto;
+    
+}
+#main{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 10%;
+}
+nav{
+    float: left;
+    width: 100%;
+    height: 4%;
+}
+#logo{
+    float: left;
+    height: 88px;
+    width: 20%;
+}
+#logo div{
+    background-color: rgb(0, 0, 0);
+    height: 78px;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 10px;
+}
+#logo div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#category{
+    background-color: rgb(20, 18, 18);
+    float: left;
+    width: 20%;
+    height: 660px;
+}
+#sec{
+    float: left;
+    width: 55%;
+    height: 660px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+#login{
+    float: right;
+    width: 25%;
+    height: 260px;
+    text-align: center;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+.mainfooter{
+    clear: both;
+    height: 98px;
+    width: 100%;
+}
+#mainmenu ul{
+    padding-top: 5px;
+    height: 84%;
+    margin-top: 0%;
+    list-style: none;
+    background-color: rgb(74, 74, 74);
+}
+#mainmenu ul li{
+    display: inline;
+}
+#mainmenu ul li a{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#low{
+    float: right;
+    width: 25%;
+    height: 400px;
+}
+.set{
+    width: 100%;
+    height: 679px;
+    background-color: rgb(64, 64, 64);
+    background-image: url(/1101/css/KakaoTalk_20221102_102851857.png);
+}
+.set div{
+    padding-top: 200px;
+    color: white;
+}
+#category_list{
+    list-style: none;
+    width: 50%;
+    margin-left: 5%;
+}
+#category_list li{
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 248, 220, 0.548);
+    margin-bottom: 25px;
+}
+#category_list li a{
+    text-decoration: none;
+    color: rgb(137, 134, 131);
+}
+#search{
+    background-color: rgb(19, 14, 14);
+    height: 88px;
+    padding-top: 30px;
+    padding-left: 500px;
+}
+#foot_list_join{
+    background-color: rgb(7, 5, 5);
+    list-style: none;
+    height: 79px;
+    padding-top: 35px;
+    margin-top: 0;
+}
+#foot_list_join li{
+    display: inline;
+    margin-left: 60px;
+}
+#foot_list_join li a{
+    text-decoration: none;
+    color: white;
+}
+#foot_list li{
+    display: inline;
+    margin-left: 60px;
+}
+#foot_list li a{
+    text-decoration: none;
+    color: white;
+}
+#foot_list{
+    background-color: rgb(7, 5, 5);
+    list-style: none;
+    height: 63px;
+    padding-top: 35px;
+    margin-top: 0;
+}
+table{
+    margin: auto;
+    text-align: center;
+    border-spacing: 10px;
+}
+#img{
+    margin-top: 10px;
+    width: 400px;
+}
+.join_footer{
+    background-color: rgb(17, 77, 77);
+}
+body a:hover{
+    background-color: rgb(121, 99, 111);
+}

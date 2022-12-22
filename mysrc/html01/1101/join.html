@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <form action="search" method="get">
+                <div id="logo">
+                    <div><a href="index.html">옷가게</a></div>
+                </div>
+                <div id="search">
+                    <input id="search_txt" type="text" name="search" value="" placeholder="검색어를 입력해 주세요.">
+                    <button id="search_btn" type="submit" onclick="">
+                        <span>검색</span>
+                    </button>
+                </div>
+            </form>
+        </header>
+        <nav id="mainmenu">
+            <ul>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">최근 본 상품</a></li>
+                <li><a href="#">주문배송조회</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </nav>
+        <section class="set">
+            <div>
+                <form action="loginPass" method="post">
+                    <table>
+                        <tr>
+                            <td>아이디</td>
+                            <td colspan="2"><input type="text" name="id"></td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호</td>
+                            <td colspan="2"><input type="password" name="pw"></td>
+                        </tr>
+                        <tr>
+                            <td>이름</td>
+                            <td colspan="2"><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td>주소</td>
+                            <td colspan="2"><input type="text" name="addr"></td>
+                        </tr>
+                        <tr>
+                            <td>성별</td>
+                            <td><input type="radio" name="gender" value="m">남자</td>
+                            <td><input type="radio" name="gender" value="w">여자</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><button type="submit" id="insert">회원가입</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+        <footer class="join_footer">
+            <div>
+                <ul id="foot_list_join">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">제휴제안</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

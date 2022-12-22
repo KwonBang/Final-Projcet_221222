@@ -1,0 +1,164 @@
+body {
+    background-color: white;
+    margin: 0px;
+}
+#main {
+    height: 900px;
+    background-color: white;
+}
+header{
+    width: 100%;
+    height: 100px;
+    /* display: block; block은 가로 세로의 크기를 지정할 수 있다. */
+    background-color: whitesmoke;
+    float: left;
+}
+#mainimg{
+    height: 80px;
+    padding-top: 20px;
+}
+nav{
+    float: right;
+}
+nav ul{
+    list-style: none;
+    margin-right: 50px;
+    padding-top: 50px;
+}
+nav ul li{
+    display: inline;
+    margin-left: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.672);
+}
+#join{
+    color: rgb(87, 183, 56);
+}
+#memberset{
+    color: rgb(87, 183, 56);
+}
+#menu {
+    background-color: rgba(73, 72, 72, 0.924);
+    float: left;
+    width: 100%;
+    height: 50px;
+}
+#menu ul li{
+    display: inline;
+    margin-left: 120px;
+}
+#menu ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#category{
+    float: left;
+}
+#category_main{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(87, 183, 56);
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+#category ul{
+    float: left;
+    width: 200px;
+    margin-left: -20px;
+    list-style: none;
+    margin-top: -5px;
+}
+#category ul li{
+    list-style: none;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    margin-bottom: 20px;
+}
+#category ul a{
+    text-decoration: none;
+    color: rgba(73, 72, 72, 0.924);
+}
+section{
+    float: left;
+    display: inline;
+    width: 800px;
+    height: 452px;
+    background-color: black;
+    margin-top: 20px;
+}
+#right{
+    margin-top: 20px;
+    float: right;
+    border: 1px solid rgb(199, 199, 199);
+    width: 235px;
+    height: 220px;
+}
+#right ul li::marker{
+    color: rgb(225, 115, 192);
+}
+#notice{
+    margin: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: rgb(87, 183, 56);
+    height: 35px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    font-size: 15px;
+}
+#right ul li a{
+    margin-right: -px;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgba(73, 72, 72, 0.924);
+}
+#event{
+    float: right;
+    background-color: white;
+    width: 235px;
+    height: 300px;
+    border: 1px solid rgb(199, 199, 199);
+}
+footer{
+    clear: both;
+    background-color: white;
+    
+}
+#foot{
+    padding-left: 200px;
+}
+#week{
+    margin: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: rgb(87, 183, 56);
+    height: 35px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    font-size: 15px;
+}
+h4{
+    font-size: 13px;
+    display: inline;
+    margin-bottom: 10px;
+    margin-left: 4px;
+}
+#weekimg{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.item{
+    color: rgb(87, 183, 56);
+}
+#joinpage{
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    
+}
+table{
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}

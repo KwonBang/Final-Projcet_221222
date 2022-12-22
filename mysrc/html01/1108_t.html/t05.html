@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="text"><input type="button" value="단어입력" id="save">
+    </div>
+    <br>
+    <div>
+        <input type="search_text" id="search_text"><input type="button" value="단어검색" id="search">
+    </div>
+</body>
+<script>
+    var save = document.getElementById('save');
+    var text = document.getElementById('text');
+    var search = document.getElementById('search');
+    var search_text = document.getElementById('search_text');
+    var list = new Array();
+    save.onclick = () => {
+        var save_value = text.value;
+        list.push(save_value);
+        alert(save_value+'\n'+'입력완료.');
+        text.value='';
+    }
+    search.onclick = () => {
+        for (let i = 0; i < list.length; i++) {
+            if(list[i]==search_text.value){
+                console.log('찾음');
+                document.querySelector('#out').innerHTML='<div id = "del_div">'+search_text.value+
+                '<input type="button" value="삭제" id="delete">'+
+                "<input type='hidden' value="+search_text.value+" id='hidden'>"+'</div>';
+                var del = document.getElementById('delete');
+                var del_div = document.getElementById('del_div');
+                del.onclick = () => {
+                    var hidden = document.getElementById('hidden');
+                    for (let i = 0; i < list.length; i++) {
+                        if (list[i]==hidden.value) {
+                            list.splice(i,1);
+                        }
+                    }
+                    del_div.remove();
+                }
+                return;
+            }
+        }
+        alert('찾을 수 없음.');
+    }
+</script>
+</html>
+<div id="out"></div>

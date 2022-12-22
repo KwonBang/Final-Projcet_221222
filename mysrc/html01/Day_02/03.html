@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width:1024px;
+        margin: 0px 0px 0px 0px;/* 위쪽, 오른쪽, 아래, 왼쪽 */
+        background-color: black;
+    }
+    header{
+        width:1024px;
+        background-color: aqua;
+        display: inline-block;
+        border: 5px solid;
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+    nav{
+        width:1024px;
+        background-color: bisque;
+        display: inline-block;
+        border: 5px solid;
+        padding: 20px 0px 0px 50px;
+
+    }
+    nav > ul {
+        list-style:none;
+    }
+    nav > ul > li{
+        background-color: cadetblue;
+        display: inline-block;
+    }
+    nav > ul > li > a{
+        text-decoration-line: none;
+    }
+    section{
+        width:1024px;
+        background-color: blue;
+        display: inline-block;
+    }
+    article{
+        width:400px;
+        background-color: brown;
+        /* display: inline-block; */
+        float: left;
+    }
+    footer{
+        width:1024px;
+        background-color: chartreuse;
+        /* display: inline-block; */
+        float: left;
+    }
+    h1:hover{
+        color: brown;
+    }
+    input[type=text]:focus{
+        background-color: rebeccapurple;
+    }
+    input[type=text]:disabled{
+        background-color: gray;
+    }
+    #login[data-a = '3']{
+        float:left;
+        width: 200px;
+        background-color: aqua;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>HTML5 기본</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="08.html">Home</a></li>
+            <li><a href="#">프론트엔드</a></li>
+            <li><a href="#">백엔드</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </nav>
+    <form action="test" method="get">
+        ID : <input type="text" name="iid">
+        이름 : <input type="text" name="nname">
+        <input type="submit" value="Save">
+
+    </form>
+</body>
+</html>

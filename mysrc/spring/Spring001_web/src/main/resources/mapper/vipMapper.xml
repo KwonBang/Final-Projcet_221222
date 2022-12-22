@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.human.dao.IF_VipcusDAO">
+	<insert id="put" parameterType="com.human.vo.VipcusVO">
+		insert into vipcus values (#{id},#{name},#{tel},
+		<choose>
+			<when test='grade=="vip"'>
+				1000
+			</when>
+			<otherwise>
+				default
+			</otherwise>
+		</choose>
+		,default,#{grade})
+	</insert>
+	<select id="show" resultType="com.human.vo.VipcusVO">
+		select * from vipcus
+	</select>
+	<select id="one" resultType="com.human.vo.VipcusVO">
+		select * from vipcus where id=#{id}
+	</select>
+	<update id="mod" parameterType="com.human.vo.VipcusVO">
+		update vipcus set name=#{name},tel=#{tel},
+		<choose>
+			<when test='grade=="vip"'>
+				point=1000,
+			</when>
+			<otherwise>
+				point=default,
+			</otherwise>
+		</choose>
+		dt=default,grade=#{grade} where id=#{id}
+	</update>
+	<delete id="del" parameterType="com.human.vo.VipcusVO">
+		delete from vipcus where id=#{id}
+	</delete>
+</mapper>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PageVO.java&apos; to &apos;final_project/src/main/java/com.groupone.vo&apos;&#x0D;&#x0A;- Original project: &apos;Spring01&apos;&#x0D;&#x0A;- Destination element: &apos;final_project/src/main/java/com.groupone.vo&apos;&#x0D;&#x0A;- Original element: &apos;com.human.vo.PageVO.java&apos;" description="Copy compilation unit" destination="=final_project/src\/main\/java&lt;com.groupone.vo" element1="/src\/main\/java&lt;com.human.vo{PageVO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1670290294430" units="1" version="1.0"/>
+</session>

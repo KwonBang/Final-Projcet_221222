@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-md-4 d-flex align-items-center">
+        <form action="reserve" method="get" class="request-form ftco-animate bg-primary"
+            style="padding-right: 100px;">
+            <h2 style="padding-left: 100px;">빠른 예약</h2>
+            <div class="form-group" id="cartype">
+                <label for="" class="label">차량 분류</label> <select onchange="car(this)"
+          class="form-control">
+          <option>차량선택</option>
+          <option value="a">경차</option>
+          <option value="b">소형차</option>
+          <option value="c">중형차</option>
+          <option value="d">준대형차</option>
+          <option value="e">대형차</option>
+          <option value="f">승합차</option>
+          <option value="g">SUV</option>
+          <option value="h">전기차</option>
+       </select>
+    </div>
+    <div class="form-group">
+       <label for="" class="label">차량 모델</label> <select id="carlist"
+          class="form-control" placeholder="City, Airport, Station, etc">
+          <option>차량모델을 선택해주세요</option>
+          <!-- 선택된 기종의 모델 정보 가져오기 -->
+       </select>
+    </div>
+            <div class="d-flex">
+                <div class="form-group mr-2">
+                    <label for="" class="label">대여일</label> <input type="text"
+                        class="form-control" id="book_pick_date" placeholder="Date">
+                </div>
+
+                <div class="form-group mr-2">
+                    <label for="" class="label">Pick-up time</label> <select
+                        name="time_pick" class="form-control">
+                        <option value="11">오전 11시</option>
+                        <option value="12">오후 12시</option>
+                        <option value="13">오후 1시</option>
+                        <option value="14">오후 2시</option>
+                        <option value="15">오후 3시</option>
+                        <option value="16">오후 4시</option>
+                        <option value="17">오후 5시</option>
+                        <option value="18">오후 6시</option>
+                        <option value="19">오후 7시</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="form-group mr-2">
+
+                    <label for="" class="label">반납일</label> <input type="text"
+                        class="form-control" id="book_off_date" placeholder="Date">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="렌트하기"
+                    class="btn btn-secondary py-3 px-4" id="rent_btn" onmousedown="logchk()">
+                    <script type="text/javascript">
+                        logchk=()=>{
+                            if(${login_id==null}){
+                                location.href="memberjoinview";
+                            }
+                        }
+                    </script>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

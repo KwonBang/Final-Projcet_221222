@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>webportal</title>
+        <meta name="description" content="">
+        <meta name="author" content="YSJ">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+
+    </head>
+    <style>
+*{
+	margin:0;
+	padding:0;
+}
+#wrap{
+	width: 715px;
+	margin: 0 auto;
+}
+#logo{
+	float:left;
+}
+#submenu{
+	width: 100px;
+	height: 24px;
+	float:right;
+	margin-top: 10px;
+}
+#submenu ul{
+	list-style: none;
+}
+#submenu ul li{
+	float:left;
+}
+#submenu ul li a{
+		font-family: "맑은 고딕";
+		font-size: 9pt;
+		text-decoration:none;
+		color:#999999;
+}
+#submenu ul li:first-child a{
+	padding-right: 8px;
+	border-right: 1px solid #999999;
+}
+#submenu ul li:last-child a{
+	padding-left: 8px;
+}
+#mainmenu{
+	float:right;
+	width: 500px;
+	height: 34px;
+	background-color:#4f7cae;
+}
+#mainmenu ul{
+	list-style: none;
+}
+#mainmenu ul li{
+	float:left;
+	line-height:34px;
+}
+#mainmenu ul li a{
+	padding-right:10px;
+	padding-left:10px;
+	font-family:"맑은 고딕";
+	font-size: 12px;
+	text-decoration:none;
+	color:#fff;
+	border-right: 1px solid #fff;
+}
+#mainmenu ul li:last-child a{
+	border-right:none;
+}
+#section1{
+		clear:both;
+		height:220px;
+}
+#search{
+	width:200px;
+	height: 211px;
+	float: left;
+	background:-ms-linear-gradient(top, #8ab0d0 0%, #acc7d0 100%);
+	background:-webkit-linear-gradient(top,#8ab0d0 0%, #acc7d0 100%);
+}
+form{
+	padding-top: 30px;
+	padding-left: 20px;
+}
+select{
+	margin: 5px;
+}
+#main_img{
+	width:500px;
+	float:right;
+}
+
+#section2{
+	clear: both;
+}
+#list{
+	width:200px;
+	height: 600px;
+	float:left;
+	background-color:#999999;
+}
+.top1{
+	background-color:#89b0cf;
+}
+.bottom1{
+	width: 180px;
+	margin: 0 auto;
+	background-color:#CCCCCC;
+}
+.bottom1 ul{
+	list-style: none;
+}
+.bottom1 ul li{
+	padding:7px 0 7px 20px;
+	font-size: 13px;
+	font-family:"맑은 고딕";
+	color:#333333;
+	font-weight:bold;
+}
+#stie{
+	width: 500px;
+	height:600px;
+	float:right;
+    background-color:#999999;
+}
+.top2{
+	background-color:#89b0cf;
+}
+.text{
+	width: 480px;
+	height: 130px;
+	background-color: #CCCCCC;
+   margin: 10px 0 0 10px;
+}
+.text img{
+	float:left;
+	padding: 15px 10px 15px 10px;
+}
+.text p{
+	padding-top:15px;
+	font-size:13px;
+	font-family:"맑은 고딕";
+}
+footer{
+	clear:both;
+	margin-top: 607px;
+	width: 715px;
+	background-color: #999999;
+    height: 30px;
+}
+footer p{
+	font-size: 12px;
+	font-weight:bold;
+	color:#333333;
+	line-height: 30px;
+	text-align:center;
+}
+
+
+    </style>
+
+    <body>
+       <div id="wrap">
+           <header>
+               <div id="logo"><img src="img/logo.jpg"></div>
+               <nav>
+                   <div id="submenu">
+                       <ul>
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#">English</a></li>
+                       </ul>
+                   </div>
+                   <div id="mainmenu">
+                       <ul>
+                           <li><a href="#">My Favorite</a></li>
+                           <li><a href="#">Best Website</a></li>
+                           <li><a href="#">Comunity</a></li>
+                           <li><a href="#">link</a></li>
+                           <li><a href="#">Design bbs</a></li>
+                           <li><a href="#">Recommand Site</a></li>
+                       </ul>
+                   </div>
+               </nav>
+           </header>
+           <section>
+                   <article id="section1">
+                       <div id="search">
+                           <form>
+                           <p>▶카테고리검색</p>
+                           <select>
+                               <option>:::대분류:::</option>
+                               <option>외국디자인</option>
+                               <option>디자인</option>
+                               <option>웹기획</option>
+                               <option>이미지사이트</option>
+                           </select> <br>
+                           <select>
+                               <option>:::주안점:::</option>
+                               <option>플래시미디어</option>
+                               <option>프로그램</option>
+                               <option>콘텐츠</option>
+                           </select>
+                            <p>▶키워드검색</p>
+                           <select>
+                               <option>:::사이트:::</option>
+                               <option>::사이트URL</option>
+                               <option>::등록자</option>
+                           </select><br>
+                          &nbsp;<input type="text" size="13"/>
+                           <input type="button" value="검색" />
+                           </form>
+                       </div>
+                       <div id="main_img"><img src="img/ship.png" width="500"></div>
+                   </article>
+                   <article id="section2">
+                       <div id="list">
+                           <div class="top1"><img src="img/favorite.jpg"></div>
+                           <div class="bottom1">
+                           <ul>
+                               <li>외국디자인/웹에이전시</li>
+                               <li>디자인</li>
+                               <li>디자인교육</li>
+                               <li>IT/웹프로그램</li>
+                               <li>웹기획</li>
+                               <li>일러스트</li>
+                               <li>이미지사이트</li>
+                               <li>플래시</li>
+                               <li>기업</li>
+                               <li>쇼핑몰</li>
+                               <li>휴대폰</li>
+                               <li>화장품</li>
+                               <li>영화</li>
+                               <li>대학</li>
+                               <li>자동차</li>
+                               <li>브랜드사이트</li>
+                               <li>커뮤니티</li>
+                               <li>엔터테이먼트</li>
+                           </ul>
+                           </div>
+                       </div>
+                       <div id="stie">
+                           <div class="top2"><img src="img/bestsite.jpg"></div>
+                           <div class="bottom2">
+                               <div class="text">
+                                   <img src="img/image1.jpg">
+                                   <p>WhitRatto<br>
+                                  http://www.whiteratte.com<br>
+                    관리자가 올리는 좋은 사이트와 리뷰, 2년전 인터넷에서 많은 사람들에게 whiteratt으로 우리에게 알려있고,
+현재 인터렉티브 플래시 관련 웹사이트를 연구중이며 외국의 NWP에 소개된 바 있다.
+</p>
+                               </div>
+                               <div class="text">
+                                   <img src="img/image2.jpg">
+                                   <p>장승<br>
+                                   http://multi.yosu.ac.kr/ks<br>
+                                   장승은 경계 표시나 이정표 또는 수호신으로 우리민족의 생활속에 뿌리 깊게 자리해 온 민속신앙의 조형물인 
+장승을 소재로 하여 여러가지 장승을 볼수 있는 사이트</p>
+                               </div>
+                               <div class="text">
+                                   <img src="img/image3.jpg">
+                                   <p>전라남도 수산종합관<br>
+                                   http://multi.yosu.ac.kr/20021637<br>
+                     수산종합관 웹사이트로 다양한 컨텐츠 어린이수산관, 퍼즐게임등을 통하여 많은 사람들이 수산물에 관심을 갖고 
+수산종합관을 찾을수 있도록 하였다.</p>
+                               </div>
+                               <div class="text">
+                                   <img src="img/image4.jpg">
+                                   <p>사도<br>
+                                   http://www.tkatlsdl.cafe24.com<br>
+                    주인공의 할아버지 섬이면서도 어릴 적 추억이 가득한 곳
+여수에 있는 섬 사도를 알리기 위해 제작하였고 소중한 추억을 담기 위해 제작한 개인 홈페이지, 앨범 자켓처럼 메인디자인이 독특함</p>
+                               </div>
+                           </div>
+                       </div>
+                   </article>
+           </section>
+           <footer>
+               <p>(C) 2014 WEBPortal. Email US : WEBPortal@webmaster.com Site Developed by Yong </p>
+           </footer>
+       </div>
+    </body>
+</html>

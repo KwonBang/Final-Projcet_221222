@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 id="h1main">자바스크립트에서 제어하기 </h1>
+    <hr>
+    <ul>
+        <li class="li1"> 첫번째 </li>
+        <li class="li1"> 두번째 </li>
+        <li class="li1"> 세번째 </li>
+    </ul>
+    <div>        
+        <ul>
+            <li> 첫번째 </li>
+            <li> 두번째 </li>
+            <li> 세번째 </li>
+        </ul>
+    </div>
+    <input type="button" value="green"  id="green">
+    <input type="button" value="red" id="red">
+</body>
+<script>
+    var li = document.querySelector('div ul');
+    var a = document.getElementById('green');
+    a.onclick = () => {
+        li.style.color = a.value;
+    }
+    var b = document.getElementById('red');
+    b.onclick = () => {
+        li.style.color = b.value;
+    }
+</script>
+</html>

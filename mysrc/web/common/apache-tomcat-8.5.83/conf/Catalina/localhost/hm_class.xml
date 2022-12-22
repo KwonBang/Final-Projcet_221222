@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="D:\mysrc\web\common\apache-tomcat-8.5.83\wtpwebapps\hm_class" path="/hm_class" reloadable="true" source="org.eclipse.jst.jee.server:hm_class"/>

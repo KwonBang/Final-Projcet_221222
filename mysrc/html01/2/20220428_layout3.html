@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>layout5</title>
+		<meta name="description" content="">
+		<meta name="author" content="user">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "맑은 고딕";
+				list-style: none;
+				text-decoration: none;
+			}
+			body{
+				background: #e6e6e6;
+			}
+			#page-wrapper{
+				width: 960px;
+				background: #fff;
+				margin: 40px auto;
+				border-radius: 10px;
+				box-shadow: 0 2px 6px rgba(100,100,100,0.8);
+			}
+			#main-header{
+                padding: 40px 50px;
+			}
+			.master-title{
+				font-size: 30px;
+				color: #181818;
+			}
+			.master-description{
+				font-size: 15px;
+				color: #383838;
+			}
+			#main-navigation{
+				border-top: 1px solid #c8c8c8;
+				border-bottom: 1px solid #c8c8c8;
+				height: 40px;
+				margin-bottom: 20px;
+			}
+			#pull-right{
+				float: right;
+			}
+			.outer-menu-item{
+				float: left;
+			}
+			.outer-menu-item:hover{
+				background: black;
+				color: white;
+			}
+			.menu-title{
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				padding: 5px 20px;
+			}
+			.search-bar{
+				height: 26px;
+				padding: 8px;
+			}
+			.input-search{
+				border: 1px solid #ccc;
+				border-radius: 15px 0 0 15px;
+				background-color: #fff;
+				width: 120px;
+				height: 24px;
+				box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
+			}
+			.input-search-submit{
+				width: 50px;
+				height: 26px;
+				border:1px solid #ccc;
+				border-radius: 0 15px 15px 0;
+				margin-left: -5px;
+			}
+			#main-section{
+				float: left;
+				width: 710px;
+			}
+			#main-aside{
+				float: right;
+				width: 200px;
+			}
+			article{
+				padding: 0 10px 20px 10px;
+				border-bottom: 1px solid #c8c8c8;
+			}
+			.article-header{
+				padding:  20px 0;
+			}
+			.article-title{
+				font-size: 25px;
+				font-weight: bold;
+				padding-bottom: 10px;
+			}
+			.article-date{
+				font-size: 13px;
+			}
+			.article-body{
+				font-size: 14px;
+			}
+			.aside-list{
+				padding: 10px 0 30px 0;
+			}
+			.aside-list>h3{
+				font-size: 15px;
+				font-weight: bold;
+			}
+			.aside-list li a{
+				margin-left: 8px;
+				font-size: 13px;
+				color: #6c6c6c;
+			}
+			#main-footer{
+				clear: both;
+				padding: 20px 15px;
+			}
+			#main-footer>a{
+				color: black;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+	   <div id="page-wrapper">
+	   	 <header id="main-header">
+	   	 	<hgroup>
+	   	 		<h1 class="master-title">HTML5 Example Preview</h1>
+	   	 		<h2 class="master-description">휴먼교육센터 </h2>
+	   	 	</hgroup>
+	   	 </header>
+	   	 <nav id="main-navigation">
+	   	 	<div id="pull-left">
+	   	 		<ul class="outer-menu">
+	   	 			<li class="outer-menu-item"><span class="menu-title">HTML5</span></li>
+	   	 			<li class="outer-menu-item"><span class="menu-title">CSS3</span></li>
+	   	 			<li class="outer-menu-item"><span class="menu-title">JavaScript</span></li>
+	   	 		</ul>
+	   	 	</div>
+	   	 	<div id="pull-right">
+	   	 		<div class="search-bar">
+	   	 			<form>
+	   	 				<input type="text" class="input-search">
+	   	 				<input type="submit"  value="검색" class="input-search-submit">
+	   	 			</form>
+	   	 		</div>
+	   	 	</div>
+	   	 </nav>
+	   	 <div id="content">
+	   	 	<section id="main-section">
+	   	 		<article>
+	   	 			<div class="article-header">
+	   	 				<h1 class="article-title">HTML5 개요와 활용</h1>
+	   	 				<p class="article-date">2018년 11월 08일</p>
+	   	 			</div>
+	   	 			<div class="article-body">
+	   	 				<img src="http://via.placeholder.com/430x280">
+	   	 				<br><br>
+	   	 				<p>Lorem ipsum dolor sit amet, conselddkfielsjflkj;lsadkjfklds;jafkj</p>
+	   	 				<br>
+	   	 				<p>Lorem ipsum dolor sit amet, conselddkfielsjflkj;lsadkjfklds;jafkj</p>
+	   	 			</div>
+	   	 		</article>
+	   	 		<article>
+	   	 			<div class="article-header">
+	   	 				<h1 class="article-title">HTML5 응용과 실습</h1>
+	   	 				<p class="article-date">2018년 11월 09일</p>
+	   	 			</div>
+	   	 			<div class="article-body">
+	   	 				<img src="http://via.placeholder.com/430x280">
+	   	 				<br><br>
+	   	 				<p>Lorem ipsum dolor sit amet, conselddkfielsjflkj;lsadkjfklds;jafkj</p>
+	   	 				<br>
+	   	 				<p>Lorem ipsum dolor sit amet, conselddkfielsjflkj;lsadkjfklds;jafkj</p>
+	   	 			</div>
+	   	 		</article>
+	   	 	</section>
+	   	 	<aside id="main-aside">
+	   	 		<div class="aside-list">
+	   	 			<h3>카테고리</h3>
+	   	 			<ul>
+	   	 				<li><a href="#">데이터</a></li>
+	   	 				<li><a href="#">데이터</a></li>
+	   	 				<li><a href="#">데이터</a></li>
+	   	 				<li><a href="#">데이터</a></li>
+	   	 				<li><a href="#">데이터</a></li>
+	   	 			</ul>
+	   	 		</div>
+	   	 		<div class="aside-list">
+	   	 		 	<h3>최근 글</h3>
+	   	 		 		<ul>
+	   	 		 			<li><a href="#">데이터</a></li>
+	   	 		 			<li><a href="#">데이터</a></li>
+	   	 				 	<li><a href="#">데이터</a></li>
+	   	 				</ul>
+	   	 		</div>
+	   	 	</aside>
+	   	 </div>
+	   	 <footer id="main-footer">
+	   	 	<a href="#">Created By Web-Contents</a>
+	   	 </footer>
+	   </div>
+	</body>
+</html>

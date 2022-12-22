@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1main">자바스크립트에서 제어하기</h1>
+    <hr>
+    검색어 <input type="text" id="sword"><input type="button" value="검색" id="idbtn">
+    <ul id="ul1">
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+    </ul>
+    <div id="div">
+        <ul id="ul2">
+            <li>첫번째</li>
+            <li>두번째</li>
+            <li>세번째</li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById('h1main').onclick = ()=>{
+        alert("AAA");
+    }
+    document.getElementById('idbtn').onclick = ()=>{
+        var a = document.getElementById("sword").value;
+        var h1 = document.querySelector('#h1main');
+        //AJAX
+        if(a==''){
+            alert('입력하세요');
+        }else{
+            h1.innerHTML=a;
+        }
+    }
+</script>
+</html>
+<!--  
+1. DOM 정의
+
+2. DOM 용어
+요소, 속성, 텍스트
+부모요소 > 자식요소 > 자손요소
+3. DOM 구조
+    window - open : 새창
+            history : 이전, 이후방문기록
+            document : 문서
+            html - head
+            - body - h1
+            - hr
+            - ul - li - 첫번째
+            - li - 두번째
+            - li - 세번째
+            - div - ul - li - 첫번째
+            - li - 두번째
+            - li - 세번째
+            왜 필요한가? 자바스크립트나, 제이쿼리에서 요소를 선택하여 동적인 문서를 제어하기 위해
+            빅데이터에서 웹크롤링!에서 필요한 지식이 됩니다.
+            
+DOM 요소(태그)와 노드(태그 & text)를 탐색
+    [요약 설명]
+    1. childNodes : 특정 태그에 포함된 자식 노드를 반환 합니다 - 배열
+    2. parentNode : 특정 태그에 포함된 부모 노드를 반환 합니다 -
+    3. nextSibling : 특정 태그에 포함된 [이후] 형제 노드를 반환합니다
+    4. nextElementSibling : 특정 태그에 포함된 [이후] 태그를 반환합니다
+    5. previousSibling : 특정 태그에 포함된 [이전] 형제 노드를 반환합니다
+    6. previousElementSibling : 특정 태그에 포함된 [이전] 형제 태그를 반환합니다
+    
+목적 : 자바스크립트에서 제어하기 > 오늘 날씨 좋음.. 변경
+h1글자를 선택해서 행복함으로 바꾸세요
+첫번째 두번째 세번째 글자를 파란색으로 바꿔보세요..제약조건 없음
+
+document.getElementById         //html 문서에 id로 지정된 요소의 객체를 반환 특징은 반환되는 객체는 유니크
+document.getElementsByClassName //html 문서에 클래스로 지정된 복수의 요소를 객체로 반환 배열로 저장됨
+예를들어 문서의 제목은 모두 동일하게 스타일 적용하고 싶다.. doc_main_title
+document.getElementsByTagName   //html 문서에 태그로 지정된 복수의 요소를 객체로 반환 배열로 저장됨
+document.querySelector          //css 에서 사용하는 선택자로 가져오고 반환되는 객체는 유니크@
+document.querySelectorAll       //css 에서 사용하는 선택자로 가져오고 반환되는 객체는 복수의 요소를 반환받는다.@
+
+요소(객체)를 가져와서 무엇을 할 수 있나?
+    1. 스타일 변경 (디자인)
+    2. 데이터 값을 가져와서 빈칸인지? 글자의 분석..등등
+    3. 문서의 값을 변경
+    4. 요소를 추가할 수도 있다. 첨부파일의 수를 늘린다.
+    5. 요소를 삭제할 수도 있다. 첨부파일의 수를 줄인다.
+    6. ****마우스이벤트나 키보드이벤트를 설정할 수도 있다... 
+
+-->

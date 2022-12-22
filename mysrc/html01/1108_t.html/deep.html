@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #aaa{
+        color:red;
+        background-color: olive;
+    }
+    #searchword_list{
+        width:200px;
+        background-color: aquamarine;
+    }
+    .delform{
+        display: inline;
+    }
+</style>
+
+<body>
+    <h1> 검색어 관리하기 </h1>
+    <input type="text" id="searchword"><input type="button" id="searchword_btn" value="검색">
+    <hr>
+    현재검색어 <h3 id="h3"> </h3>
+    <div id="searchword_list">        
+    </div>
+</body>
+<script>
+    var listdiv = document.getElementById("searchword_list");
+    var cnt=0;
+    var list = new Array();
+    document.getElementById("searchword_btn").onclick = () => {
+        let word = document.getElementById("searchword").value;
+        list.push(word);
+        listdiv.innerHTML+=word+"<form class='delform'>"+
+                                  "<input type='hidden' value="+cnt+" id='no'>"+
+                                  "<input type='button' onclick='delList(no.value)' value='delete'>"+
+                            " </form>"+"<br>";
+      h3.innerText=word +"<span>text</span>";
+        cnt++;       
+    };
+
+    function delList(index){
+        list.splice(index,1);
+    }
+</script>
+</html>

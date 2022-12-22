@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;dto&apos; to &apos;Hm_1012_INF/src&apos;&#x0D;&#x0A;- Original project: &apos;Hm_1011_GUI_2&apos;&#x0D;&#x0A;- Destination element: &apos;Hm_1012_INF/src&apos;&#x0D;&#x0A;- Original element: &apos;Hm_1011_GUI_2/src/dto&apos;" description="Copy package" destination="=Hm_1012_INF/src" element1="/src&lt;dto" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1665546031910" version="1.0"/>
+</session>

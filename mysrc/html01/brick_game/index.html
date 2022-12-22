@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벽돌깨기</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        canvas{background: rgb(223, 182, 182); background-size: 100px; background-image: url(data:image/jpeg;base64,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); display: block; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" width="480" height="320"></canvas>
+    <div><input type="button" value="일시정지" onclick="stop()"></div>
+    <script>
+        var sp = true; 
+        stop = () =>{
+            if(sp){
+                sp=false;
+            }else{
+                sp=true;
+            }
+        }
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+        // 사각형 만들기
+        // ctx.beginPath();
+        // ctx.rect(20,40,50,50);
+        // ctx.fillStyle = "blue";
+        // ctx.fill();
+        // ctx.closePath();
+        // 원 만들기
+        // ctx.beginPath();
+        // ctx.arc(230, 300, 20, 0, Math.PI*2, false);
+        // ctx.fillStyle = "green";
+        // ctx.fill();
+        // ctx.closePath();
+        //원 외곽선 색상
+        // ctx.beginPath();
+        // ctx.rect(160, 10, 100, 40);
+        // ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+        // ctx.stroke();
+        // ctx.closePath();
+
+        //원위치
+        var x = Math.floor((Math.random()*470));
+        var y = canvas.height-10;
+        //원 속도
+        var dx = 2;
+        var dy = -2;
+        //원반지름
+        var ballRadius = 10;
+        //paddle 만들기
+        var paddleHeight = 10;
+        var paddleWidth = 75;
+        var paddleX = (canvas.width-paddleWidth)/2;
+        //키보드감지
+        var rightPressed = false;
+        var leftPressed = false;
+        //벽돌
+        var brickRowCount = 3;
+        var brickColumnCount = 5;
+        var brickWidth = 75;
+        var brickHeight = 20;
+        var brickPadding = 10;
+        var brickOffsetTop = 30;
+        var brickOffsetLeft = 30;
+        var bricks=[];
+        var score = 0;
+        
+        for(var c = 0;c<brickColumnCount;c++){
+            bricks[c]=[];
+            for(var r = 0;r<brickRowCount;r++){
+                bricks[c][r]={x: 0,y: 0,status: 2};
+            }
+        }
+        
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+        document.addEventListener("mousemove", mouseMoveHandler, false);
+        // function makeColor(){
+        //     let r= Math.floor((Math.random()*256));
+        //     let g= Math.floor((Math.random()*256));
+        //     let b= Math.floor((Math.random()*256));
+        //     colorRandom ="rgb("+r+","+g+","+b+")";
+        // }
+        function keyDownHandler(e) {
+            if(e.keyCode == 39) {
+                rightPressed = true;
+            }
+            else if(e.keyCode == 37) {
+                leftPressed = true;
+            }
+        }
+        function keyUpHandler(e) {
+            if(e.keyCode == 39) {
+                rightPressed = false;
+            }
+            else if(e.keyCode == 37) {
+                leftPressed = false;
+            }
+        }
+
+        function collisionDetection() {
+            for(var c=0; c<brickColumnCount; c++) {
+                for(var r=0; r<brickRowCount; r++) {
+                    var b = bricks[c][r];
+                    if(b.status>0){
+                        if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                            dy = -dy;
+                            b.status--;
+                            score++;
+                            if(score==(brickColumnCount*brickRowCount)*2){
+                                alert("YOU WIN, CONGRATULATIONS!");
+                                document.location.reload();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        function drawScore() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#0095DD";
+            ctx.fillText("Score: "+score,8,20);
+        }
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+        function drawBricks() {
+            for(var c=0; c<brickColumnCount; c++) {
+                for(var r=0; r<brickRowCount; r++) {
+                    if(bricks[c][r].status > 0) {
+                        var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+                        var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        ctx.fillStyle = "#0095DD";
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+        function mouseMoveHandler(e) {
+            var relativeX = e.clientX - canvas.offsetLeft;
+            if(relativeX > 0 && relativeX < canvas.width) {
+                paddleX = relativeX - paddleWidth/2;
+            }
+        }
+        function draw() {
+            if(sp){
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBricks();
+                drawBall();
+                drawPaddle();
+                drawScore();
+                collisionDetection();
+                if(y+dy<ballRadius){
+                    dy=-dy;
+                }else if(y+dy>canvas.height-ballRadius){
+                    if(x>paddleX&&x<paddleX+paddleWidth){
+                        dy=-dy;
+                    }else{
+                        alert("GAME OVER");
+                        dy=-dy;
+                        document.location.reload();
+                    }
+                }
+                if(x+dx>canvas.width-ballRadius||x+dx<ballRadius){
+                    dx=-dx;
+                }
+                if(rightPressed&&paddleX<canvas.width-paddleWidth) {
+                    paddleX += 7;
+                }else if(leftPressed&&paddleX>0) {
+                    paddleX -= 7;
+                }
+                x += dx;
+                y += dy;
+            }
+        }
+        setInterval(draw, 10);
+
+
+    </script>
+</body>
+</html>

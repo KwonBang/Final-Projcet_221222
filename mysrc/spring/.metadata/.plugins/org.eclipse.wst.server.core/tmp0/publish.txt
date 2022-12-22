@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Dec 21 16:23:54 KST 2022
+org.eclipse.jst.jee.server\:Final_project_OneTeam=D\:\\mysrc\\spring\\common\\apache-tomcat-8.5.83-windows-x64\\apache-tomcat-8.5.83\\wtpwebapps\\Final_project_OneTeam
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\human\\.m2\\repository\\org\\springframework\\spring-web\\4.3.22.RELEASE\\spring-web-4.3.22.RELEASE.jar=D\:\\mysrc\\spring\\common\\apache-tomcat-8.5.83-windows-x64\\apache-tomcat-8.5.83\\wtpwebapps\\Final_project_OneTeam\\WEB-INF\\lib\\spring-web-4.3.22.RELEASE.jar
+org.eclipse.jst.jee.server\:final_project=D\:\\mysrc\\spring\\common\\apache-tomcat-8.5.83-windows-x64\\apache-tomcat-8.5.83\\wtpwebapps\\final_project

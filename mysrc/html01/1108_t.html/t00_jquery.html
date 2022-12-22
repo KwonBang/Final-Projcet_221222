@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 id="h1main">자바스크립트에서 제어하기 </h1>
+    <hr>
+    <ul>
+        <li class="li1"> 첫번째 </li>
+        <li class="li1"> 두번째 </li>
+        <li class="li1"> 세번째 </li>
+    </ul>
+    <div>        
+        <ul>
+            <li> 첫번째 </li>
+            <li> 두번째 </li>
+            <li> 세번째 </li>
+        </ul>
+    </div>
+    <input type="button" value="green"  id="green">
+    <input type="button" value="red" id="red">
+</body>
+<script>
+    var li = $('div ul');
+    var a = $('#green');
+    var b = $('#red');
+
+    $(document).ready(function () {
+
+        a.click(function(){
+            li.css('color',a.val());
+        });
+        b.click(function(){
+            li.css('color',b.val());
+        });
+        
+    });
+</script>
+</html>

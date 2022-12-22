@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mypaint{
+        border: 1px solid;
+    }
+</style>
+<body>
+    <div>   <!-- 캔버스 위치 -->
+        <canvas id="mypaint" width="300" height="400"></canvas>
+    </div>
+    <div>   <!-- 색상 선택 등 컨트롤 박스 -->
+        검정<input type="radio" name="color" onclick="color(this.value)" value="black" checked>
+        빨강<input type="radio" name="color" onclick="color(this.value)" value="red">
+        초록<input type="radio" name="color" onclick="color(this.value)" value="green">
+        <br>
+        <input type="range" name="bold" min="1" max="30" onchange="range(this.value)" value="1">
+        <br>
+        둥근모서리<input type="radio" name="edge" onclick="edge(this.value)" value="round" checked>
+        각진모서리<input type="radio" name="edge" onclick="edge(this.value)" value="butt">
+        <br>
+        <!-- 지우개<input type="checkbox" name="erase" onselect="erase(this.value)" value="true"> -->
+        <!--
+            기존에는 태그의 이벤트 발생이 아닌.. 자바스크립에서 html문서의 객체를 가져왔다.
+            지금은 html에서 이벤트 발생이 되면 이를 처리하도록 하는 컨셉
+            1. html에서 이벤트를 발생시키고 자바스크립트를 호출 : 색상..
+            2. 자바스크립트(제이쿼리)에서 이벤트를 감지하는 법
+        -->
+    </div>
+</body>
+    <script>
+        const drawPan = document.getElementById('mypaint');
+        // console.log(typeof(drawPan));
+        var myctx = drawPan.getContext('2d');
+        myctx.lineCap="round";
+        var flag=false;
+        // 마우스 동작 등록
+
+        // 마우스 클릭 시점
+        drawPan.addEventListener('mousedown',() => {
+            startDraw();
+        }); //e 매개변수 => {코드작성} : 익명의 함수로 정의 한다.
+            //이벤트리스너의 메서드에서 매개변수로 mousedown동작을 지정하고 그 다음에 동작을 정의
+        // 마우스 버튼 뗄 시점
+        drawPan.addEventListener('mouseup',() => {
+            endDraw();
+        });
+        // 마우스 무브 움직임
+        drawPan.addEventListener('mousemove',() => {
+            moveDraw();
+        });
+        // html에서 색상에 이벤트를 처리하는 함수
+         color = c => {
+            myctx.strokeStyle=c;
+            myctx.beginPath();
+        }
+        range = size => {
+            myctx.lineWidth=size;
+            myctx.beginPath();
+        }
+        edge = e => {
+            myctx.lineCap=e;
+            if(e=="butt"){
+                alert("각진모서리로 변경");
+                myctx.lineJoin="miter";
+            }else{
+                alert("둥근모서리로 변경");
+                myctx.lineJoin="round";
+            }
+            myctx.beginPath();
+        }
+        // erase = s => {
+        //     myctx.clearRect((e.clientX-8), (e.clientY-8))
+        // }
+        function startDraw() {  //시작점을 시작으로 --- 이동점의 선을 긋는것..
+            flag=true;
+            let e=window.event;
+            console.log('마우스 클릭 시작');
+            myctx.moveTo((e.clientX-8), (e.clientY-8));
+            // console.log((e.clientX-8)+"/"+(e.clientY-8));
+        }
+        function endDraw() {
+            console.log('마우스 클릭 끝');
+            flag=false;
+        }
+        function moveDraw(){    //이동점으로 선을 긋는 것
+            if(flag){
+                let e=window.event;
+                myctx.lineTo((e.clientX-8), (e.clientY-8));
+                // myctx.lineJoin="round";
+                // myctx.lineCap="round";
+                myctx.stroke();
+                // console.log('마우스 move');
+                console.log((e.clientX-8)+"/"+(e.clientY-8));
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring01"/>
+<aop-project name="Spring001_web"/>
+<aop-project name="Spring01_test"/>
+<aop-project name="Final_project_OneTeam"/>
+</aop-reference-model>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1024px;
+        }
+        #header{
+            background-color: aqua;
+        }
+        #nav{
+            background-color: aqua;
+        }
+        #section{
+            background-color: aqua;
+            float: left;
+            width: 514px;
+        }
+        #aside{
+            background-color: aqua;
+            float: left;
+            width: 504px;
+            height: 137px;
+        }
+        #footer{
+            background-color: aqua;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        #log_btn{
+            position: relative;
+            right: -60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"><p>휴먼모임<br>오늘도 즐거운 하루 입니다.</p></div>
+    <div id="nav"><p>[홈으로] [프론트엔드][백엔드][데이터베이스]</p></div>
+    <div id="section">오늘의 중요 포인트
+        <ol type="1">
+            <li>웹프로그래밍</li>
+            <li>Html css js</li>
+            <li>공간분할태그</li>
+            <li>블록, 인라인, 인라인-블록</li>
+        </ol>
+    </div>
+    <div id="aside"><p>로그인</p>
+        <form action="test" method="get">
+            <p>
+                <input type="text" name="id" id="name"><br>
+                <input type="password" name="pwd" id="pwd"><br>
+                <input type="submit" value="로그인" id="log_btn">
+            </p>
+        </form>
+    </div>
+    <div id="footer"><p>개발자정보:김티처</p></div>
+</body>
+</html>
