@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="boardMapper">
+
+	<resultMap type="map" id="listMap">
+		<result column="SEQ" property="seq"/>
+		<result column="MEM_NAME" property="mem_name"/>
+		<result column="MEM_ID" property="mem_id"/>
+		<result column="BOARD_SUBJECT" property="board_subject"/>
+		<result column="BOARD_CONTENT" property="board_content"/>
+		<result column="REG_DATE" property="reg_date"/>
+		<result column="UPT_DATE" property="upt_date"/>
+		<result column="VIEW_CNT" property="view_cnt"/>
+		<result column="USEYN" property="useyn"/>
+		<result column="FILE_SEQ" property="file_seq"/>
+		<result column="REAL_NAME" property="real_name"/>
+		<result column="SAVE_NAME" property="save_name"/>
+		<result column="REG_DATE" property="reg_date"/>
+		<result column="SAVE_PATH" property="save_path"/>
+		<result column="LIST_SEQ" property="list_seq"/>
+	</resultMap>
+	
+	<sql id="allColumn">
+		seq,
+            mem_name
+            ,mem_id
+            ,board_subject
+            ,board_content
+            ,reg_date
+            ,upt_date
+            ,view_cnt
+            ,useyn
+	</sql>
+	<sql id="search">
+		<choose>
+        	<when test='searchType == "W"'>
+				and mem_name like '%'||#{searchText}||'%'
+		    </when>
+		    <when test='searchType == "T"'>
+				and board_subject like '%'||#{searchText}||'%'
+		    </when>
+		    <when test='searchType == "TC"'>
+				and board_subject like '%'||#{searchText}||'%' or board_content like '%'||#{searchText}||'%'
+		    </when>
+		</choose>
+		<if test='startDate != null and endDate != null and endDate != "" and startDate != ""'>
+			and to_char(reg_date, 'yyyy-MM-dd') between #{startDate} and #{endDate}
+		</if>
+	</sql>
+	
+		<!-- 게시글 전체 불러오기 -->
+	<select id="selectAll" resultType="com.join.vo.BoardVO" parameterType="com.join.vo.PageVO">
+		select
+			<include refid="allColumn"/>
+        from 
+            (select a.*,rownum rnum
+			from
+                (select
+                    <include refid="allColumn"/>
+				from board_study
+				where 1=1
+				<include refid="search"/>
+                order by seq) a)
+        where rnum between #{startNo} and #{endNo}
+        order by rnum
+	</select>
+	<sql id="">
+	</sql>
+		<!-- 게시글 작성 -->
+	<insert id="insert" parameterType="com.join.vo.BoardVO">
+		insert into board_study(
+			seq
+			,mem_name
+			,mem_id
+			,board_subject
+			,board_content
+			,reg_date
+			,view_cnt
+		) values(
+			(select nvl(max(seq),0)+1 from board_study)<!-- 최대게시글번호+1 첫 게시물일경우 (null -> 0) 0+1 -->
+			,#{mem_name}
+			,#{mem_id}
+			,#{board_subject}
+			,#{board_content}
+			,sysdate
+			,0
+		)
+	</insert>
+	
+	<!-- 게시글번호로 게시글삭제 -->
+	<delete id="delete" parameterType="String">
+		delete 
+		from 
+		board_study 
+		where 
+		seq = #{value}
+	</delete>
+	
+	<!-- 게시글번호로 게시글상세보기 -->
+	<select id="selectOne" resultMap="listMap" parameterType="map">
+		select
+			b.seq
+			,b.mem_name
+			,b.mem_id
+			,b.board_subject
+			,b.board_content
+			,f.real_name
+			,f.save_name
+			,f.save_path
+			,f.list_seq
+		from board_study b
+		inner join
+		file_study_table f
+		on b.seq = f.list_seq
+		where b.seq=#{seq}
+	</select>
+	<update id="viewCnt" parameterType="map">
+		update
+		board_study
+		set
+			view_cnt = view_cnt+1
+		where seq = #{seq}
+	</update>
+	<!-- 게시글수정 -->
+	<update id="update" parameterType="map">
+		update 
+		board_study
+		set
+			mem_name = #{mem_name}
+			,mem_id = #{mem_id}
+			,board_subject = #{board_subject}
+			,board_content = #{board_content}
+			,upt_date = sysdate
+		where seq = #{seq}
+	</update>
+	<select id="totalCount" resultType="int" parameterType="com.join.vo.PageVO">
+		select 
+			count(seq) 
+		from 
+			board_study
+		where 
+		1=1
+		<include refid="search"/>
+	</select>
+	<select id="selectSeq" resultType="int" parameterType="com.join.vo.BoardVO">
+		select nvl(max(seq),0)+1 from board_study
+	</select>
+	<select id="nexaSelect" resultMap="listMap">
+		select seq,mem_name,mem_id,board_subject from board_study
+	</select>
+</mapper>
+
